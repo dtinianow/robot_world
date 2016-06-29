@@ -14,7 +14,7 @@
 <% @robots.each do |robot| %>
     <tr>
       <td><%= robot.id %></td>
-      <td><a href='/robots/<%= robot.id %>'><%= robot.name %></a></td>
+      <td id="robot-name"><a href='/robots/<%= robot.id %>'><%= robot.name %></a></td>
       <td><%= robot.city %></td>
       <td><%= robot.state %></td>
       <td><%= robot.avatar %></td>

@@ -15,7 +15,7 @@ module TestHelpers
 
   def task_manager
     database = YAML::Store.new('db/robot_world_test')
-    @database ||= TaskManager.new(database)
+    @database ||= RobotWorld.new(database)
   end
 end
 
