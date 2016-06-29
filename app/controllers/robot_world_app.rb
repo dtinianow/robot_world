@@ -3,6 +3,7 @@ require 'models/robot_world'
 class RobotWorldApp < Sinatra::Base
 
   set :root, File.expand_path('..', __dir__)
+  set :method_override, true
 
   get '/' do
     erb :dashboard
@@ -30,6 +31,16 @@ class RobotWorldApp < Sinatra::Base
   get '/robots/:id/edit' do |id|
     @robot = robot_world.find(id.to_i)
     erb :edit
+  end
+
+  put '/robots/:id' do |id|
+    robot_world.update(id.to_i, params[:robot])
+    redirect '/robots'
+  end
+
+  delete '/robots/:id' do |id|
+    robot_world.destroy(id.to_i)
+    redirect '/robots'
   end
 
   def robot_world

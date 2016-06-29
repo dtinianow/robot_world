@@ -1,13 +1,14 @@
 <form action="/robots/<%= @robot.id %>" method="post">
-  <h5>Edit</h5>
+  <input type="hidden" name="_method" value="PUT">
+  <h3>Edit</h3>
   <ul>
-    <input type="hidden" name="_method" value="PUT">
-    <input type="text" name="robot[name]" value="<%= @robot.name %>">
-    <input type="text" name="robot[city]" value="<%= @robot.city %>">
-    <input type="text" name="robot[state]" value="<%= @robot.state %>">
-    <input type="text" name="robot[avatar]" value="<%= @robot.avatar %>">
-    <input type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>">
-    <input type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>">
-    <input type="text" name="robot[department]" value="<%= @robot.department %>">
+    <li>Name: <input type="text" name="robot[name]" value="<%= @robot.name %>"></li>
+    <li>City: <input type="text" name="robot[city]" value="<%= @robot.city %>"></li>
+    <li>State: <input type="text" name="robot[state]" value="<%= @robot.state %>"></li>
+    <li>Avatar: <input type="text" name="robot[avatar]" value="<%= @robot.avatar %>"></li>
+    <li>Birthdate: <input type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>"></li>
+    <li>Date Hired: <input type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>"></li>
+    <li>Department: <input type="text" name="robot[department]" value="<%= @robot.department %>"></li>
   </ul>
+  <input type="submit" value="Submit Changes">
 </form>

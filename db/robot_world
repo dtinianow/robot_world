@@ -1,13 +1,5 @@
 ---
 robots:
-- id: 1
-  name: Bob
-  city: Denver
-  state: CO
-  avatar: TBD
-  birthdate: 1/1/2016
-  date_hired: 6/28/2016
-  department: Turing
 - id: 2
   name: Steve
   city: Philadelphia
@@ -16,4 +8,4 @@ robots:
   birthdate: 12/31/1900
   date_hired: 06/27/16
   department: Cleaning
-total: 2
+total: 3

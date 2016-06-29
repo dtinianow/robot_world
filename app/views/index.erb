@@ -1,6 +1,6 @@
-<h1>All the Robots</h1>
+<h1 class="well">All the Robots</h1>
 
-<table>
+<table class="table table-striped table-bordered table-hover table-condensed">
   <tr>
     <th>ID</th>
     <th>Name</th>
@@ -22,6 +22,12 @@
       <td><%= robot.date_hired %></td>
       <td><%= robot.department %></td>
       <td><a href="/robots/<%= robot.id %>/edit">Edit</a></td>
+      <td>
+        <form action="robots/<%= robot.id %>" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <input type="submit" value="Delete">
+        </form>
+      </td>
     </tr>
 <% end %>
 </table>
