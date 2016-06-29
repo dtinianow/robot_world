@@ -1,0 +1,27 @@
+<h1>All the Robots</h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Avatar</th>
+    <th>Birthdate</th>
+    <th>Date Hired</th>
+    <th>Department</th>
+  </tr>
+<% @robots.each do |robot| %>
+    <tr>
+      <td><%= robot.id %></td>
+      <td><a href='/robots/<%= robot.id %>'><%= robot.name %></a></td>
+      <td><%= robot.city %></td>
+      <td><%= robot.state %></td>
+      <td><%= robot.avatar %></td>
+      <td><%= robot.birthdate %></td>
+      <td><%= robot.date_hired %></td>
+      <td><%= robot.department %></td>
+      <td><a href="/robots/<%= robot.id %>/edit">Edit</a></td>
+    </tr>
+<% end %>
+</table>
