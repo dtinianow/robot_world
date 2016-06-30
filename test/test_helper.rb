@@ -9,11 +9,11 @@ require 'launchy'
 
 module TestHelpers
   def teardown
-    task_manager.delete_all
+    robot_world.delete_all
     super
   end
 
-  def task_manager
+  def robot_world
     database = YAML::Store.new('db/robot_world_test')
     @database ||= RobotWorld.new(database)
   end

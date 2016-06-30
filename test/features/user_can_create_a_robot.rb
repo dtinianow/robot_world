@@ -9,7 +9,7 @@ class UserCanCreateARobotTest < FeatureTest
     fill_in "robot[name]", with: "Bob"
     click_button("Make Robot")
     assert_equal "/robots", current_path
-    assert page.has_css?('#robot-name')
+    assert page.has_content?('All the Robots')
     within ("#robot-name") do
       assert page.has_content?("Bob")
     end
