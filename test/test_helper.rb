@@ -6,6 +6,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'capybara/dsl'
 require 'launchy'
+require 'sqlite3'
 
 module TestHelpers
   def teardown
@@ -14,8 +15,9 @@ module TestHelpers
   end
 
   def robot_world
-    database = YAML::Store.new('db/robot_world_test')
-    @database ||= RobotWorld.new(database)
+    database = SQLite3::Database.new('db/robot_world_test.db')
+    database.results_as_hash = true
+    @robot_world ||= RobotWorld.new(database)
   end
 end
 

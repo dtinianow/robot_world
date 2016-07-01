@@ -1,7 +1,7 @@
-<form class="well" action="/robots/<%= @robot.id %>" method="post">
+<form class=" form-group well" action="/robots/<%= @robot.id %>" method="post">
   <input type="hidden" name="_method" value="PUT">
   <h3>Edit</h3>
-  <ul>
+  <ul class="list-unstyled">
     <li>Name: <input type="text" name="robot[name]" value="<%= @robot.name %>"></li>
     <li>City: <input type="text" name="robot[city]" value="<%= @robot.city %>"></li>
     <li>State: <input type="text" name="robot[state]" value="<%= @robot.state %>"></li>

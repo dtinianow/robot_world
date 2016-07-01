@@ -2,11 +2,15 @@ require_relative '../test_helper'
 
 class UserCanEditARobotTest < FeatureTest
 
+  def current_robot_id
+    robot_world.all.first.id
+  end
+
   def test_user_can_edit_a_robot
     robot_world.create(name: "Bob", city: "Denver")
     visit '/robots'
     click_on("Edit")
-    assert_equal "/robots/1/edit", current_path
+    assert_equal "/robots/#{current_robot_id}/edit", current_path
     fill_in "robot[name]", with: "Joe"
     click_on("Submit Changes")
     assert_equal "/robots", current_path
