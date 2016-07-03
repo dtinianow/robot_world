@@ -1,14 +1,38 @@
-<div class="well">
+<div class="well text-center">
 <h2>Bring on the singularity and make a new robot!</h2><br>
 <h4>Enter some robot info:</h4>
 </div>
-<form class="form-group form-inline" action="/robots" method="post">
-  <p>Name: <input class="form-control" type='text' name='robot[name]'></p>
-  <p>City: <input class="form-control" type='text' name='robot[city]'></p>
-  <p>State: <input class="form-control" type='text' name='robot[state]'></p>
-  <p>Avatar: <input class="form-control" type='text' name='robot[avatar]'></p>
-  <p>Birthdate: <input class="form-control" type='text' name='robot[birthdate]'></p>
-  <p>Date Hired: <input class="form-control" type='text' name='robot[date_hired]'></p>
-  <p>Department: <input class="form-control" type='text' name='robot[department]'></p>
-  <button type='submit'>Make Robot</button>
-</form>
+<div class="container" style="margin: 5%">
+  <form class="form-horizontal" action="/robots" method="post">
+    <div class="form-group">
+      <label class="control-label">Name:</label>
+      <input class="form-control" type="text" name="robot[name]" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label class="control-label">City:</label>
+      <input class="form-control" type="text" name="robot[city]" placeholder="City">
+    </div>
+    <div class="form-group">
+      <label class="control-label">State:</label>
+      <input class="form-control" type="text" name="robot[state]" placeholder="State">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Avatar:</label>
+      <input class="form-control" type="text" name="robot[avatar]" placeholder="Avatar">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Birthdate:</label>
+      <input class="form-control" type="text" name="robot[birthdate]" placeholder="Birthdate">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Date Hired:</label>
+      <input class="form-control" type="text" name="robot[date_hired]" placeholder="Date Hired">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Department:</label>
+      <input class="form-control" type="text" name="robot[department]" placeholder="Department">
+    </div>
+    <button class="btn btn-primary" type='submit'>Make Robot!</button>
+    <button class="btn btn-secondary"><a href="/">Cancel</a></button>
+  </form>
+</div>

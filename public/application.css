@@ -1,0 +1,23 @@
+.first-column {
+  font-weight: bold;
+}
+
+.dynamic-robot-data {
+  vertical-align: middle;
+}
+
+#homepage {
+  background-image: url(https://i.ytimg.com/vi/vDDYP7cdUKo/maxresdefault.jpg);
+}
+
+#single-robot-data-table {
+  margin-top: 40px;
+}
+
+#robot-thumbnail {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto }
+}
