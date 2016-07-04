@@ -12,7 +12,7 @@
         <th class="text-center">Birthdate</th>
         <th class="text-center">Date Hired</th>
         <th class="text-center">Department</th>
-        <th  class="text-center" colspan="2">Actions</th>
+        <th class="text-center" colspan="2">Actions</th>
       </tr>
     <% @robots.each do |robot| %>
         <tr>
@@ -28,7 +28,7 @@
           <td style="vertical-align:middle"><%= robot.birthdate %></td>
           <td style="vertical-align:middle"><%= robot.date_hired %></td>
           <td style="vertical-align:middle"><%= robot.department %></td>
-          <td style="vertical-align:middle"><button class="btn btn-link"><a href="/robots/<%= robot.id %>/edit">Edit</a></button></td>
+          <td style="vertical-align:middle"><button class="btn btn-link edit-robot-<%= robot.id %>"><a href="/robots/<%= robot.id %>/edit">Edit</a></button></td>
           <td style="vertical-align:middle">
             <form action="robots/<%= robot.id %>" method="post">
               <input type="hidden" name="_method" value="DELETE">

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/application.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <title>My Sinatra Application</title>
+</head>
+<body>
+    <h1 class="well text-center">All the Robots</h1>
+
+<div class="container">
+  <div class="text-center">
+    <table id="all-robot-data" class="table table-striped table-bordered table-hover table-condensed">
+      <tr>
+        <th class="text-center">Avatar</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Name</th>
+        <th class="text-center">City</th>
+        <th class="text-center">State</th>
+        <th class="text-center">Birthdate</th>
+        <th class="text-center">Date Hired</th>
+        <th class="text-center">Department</th>
+        <th class="text-center" colspan="2">Actions</th>
+      </tr>
+    
+        <tr>
+          <td>
+            <div>
+              <img id="robot-thumbnail" src="https://robohash.org/.png">
+            </div>
+          </td>
+          <td style="vertical-align:middle">16</td>
+          <td style="vertical-align:middle"><a href='/robots/16'>Bob</a></td>
+          <td style="vertical-align:middle">Denver</td>
+          <td style="vertical-align:middle"></td>
+          <td style="vertical-align:middle"></td>
+          <td style="vertical-align:middle"></td>
+          <td style="vertical-align:middle"></td>
+          <td class="edit-robot-16" style="vertical-align:middle"><button class="btn btn-link"><a href="/robots/16/edit">Edit</a></button></td>
+          <td style="vertical-align:middle">
+            <form action="robots/16" method="post">
+              <input type="hidden" name="_method" value="DELETE">
+              <button class="btn btn-link" type="submit" value="Delete">Delete</button>
+            </form>
+          </td>
+        </tr>
+    
+    </table>
+  </div>
+</div>
+
+<div class="container well text-center">
+  <button class="btn btn-secondary"><a href="/">Return to Homepage</a></button>
+</div>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src='js/bootstrap.js'></script>
+</body>
+</html>
