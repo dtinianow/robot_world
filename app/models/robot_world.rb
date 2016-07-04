@@ -59,4 +59,15 @@ class RobotWorld
   def delete_all
     database.execute("DELETE FROM robots;")
   end
+
+  def generate_fake_data
+    { name: Faker::Name.first_name,
+      city: Faker::Address.city,
+      state: Faker::Address.state_abbr,
+      avatar: Faker::Lorem.word,
+      birthdate: Faker::Date.between('1948-01-01', '2009-12-31'),
+      date_hired: Faker::Date.between('2010-01-01', Date.today),
+      department: Faker::Commerce.department
+    }
+  end
 end

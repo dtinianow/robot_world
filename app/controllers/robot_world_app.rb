@@ -10,6 +10,7 @@ class RobotWorldApp < Sinatra::Base
   end
 
   get '/robots/new' do
+    @fake_robot = robot_world.generate_fake_data
     erb :new
   end
 

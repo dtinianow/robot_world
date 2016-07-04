@@ -6,31 +6,31 @@
   <form class="form-horizontal" action="/robots" method="post">
     <div class="form-group">
       <label class="control-label">Name:</label>
-      <input class="form-control" type="text" name="robot[name]" placeholder="Name">
+      <input class="form-control" type="text" name="robot[name]" value="<%= @fake_robot[:name] %>">
     </div>
     <div class="form-group">
       <label class="control-label">City:</label>
-      <input class="form-control" type="text" name="robot[city]" placeholder="City">
+      <input class="form-control" type="text" name="robot[city]" value="<%= @fake_robot[:city] %>">
     </div>
     <div class="form-group">
       <label class="control-label">State:</label>
-      <input class="form-control" type="text" name="robot[state]" placeholder="State">
+      <input class="form-control" type="text" name="robot[state]" value="<%= @fake_robot[:state] %>">
     </div>
     <div class="form-group">
       <label class="control-label">Avatar:</label>
-      <input class="form-control" type="text" name="robot[avatar]" placeholder="Avatar">
+      <input class="form-control" type="text" name="robot[avatar]" value="<%= @fake_robot[:avatar] %>">
     </div>
     <div class="form-group">
       <label class="control-label">Birthdate:</label>
-      <input class="form-control" type="text" name="robot[birthdate]" placeholder="Birthdate">
+      <input class="form-control" type="text" name="robot[birthdate]" value="<%= @fake_robot[:birthdate] %>">
     </div>
     <div class="form-group">
       <label class="control-label">Date Hired:</label>
-      <input class="form-control" type="text" name="robot[date_hired]" placeholder="Date Hired">
+      <input class="form-control" type="text" name="robot[date_hired]" value="<%= @fake_robot[:date_hired] %>">
     </div>
     <div class="form-group">
       <label class="control-label">Department:</label>
-      <input class="form-control" type="text" name="robot[department]" placeholder="Department">
+      <input class="form-control" type="text" name="robot[department]" value="<%= @fake_robot[:department] %>">
     </div>
     <button class="btn btn-primary" type='submit'>Make Robot!</button>
     <button class="btn btn-secondary"><a href="/">Cancel</a></button>
