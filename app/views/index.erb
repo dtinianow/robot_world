@@ -28,7 +28,7 @@
           <td style="vertical-align:middle"><%= robot.birthdate %></td>
           <td style="vertical-align:middle"><%= robot.date_hired %></td>
           <td style="vertical-align:middle"><%= robot.department %></td>
-          <td style="vertical-align:middle"><button class="btn btn-link edit-robot-<%= robot.id %>"><a href="/robots/<%= robot.id %>/edit">Edit</a></button></td>
+          <td style="vertical-align:middle"><a class="btn btn-link edit-robot-<%= robot.id %>" href="/robots/<%= robot.id %>/edit">Edit</a></td>
           <td style="vertical-align:middle">
             <form action="robots/<%= robot.id %>" method="post">
               <input type="hidden" name="_method" value="DELETE">
@@ -42,5 +42,5 @@
 </div>
 
 <div class="container well text-center">
-  <button class="btn btn-secondary"><a href="/">Return to Homepage</a></button>
+  <a class="btn btn-secondary" href="/">Return to Homepage</a>
 </div>
