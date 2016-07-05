@@ -1,8 +1,4 @@
-require 'models/robot_world'
-
 class RobotWorldApp < Sinatra::Base
-
-  set :root, File.expand_path('..', __dir__)
 
   get '/' do
     erb :dashboard
@@ -14,6 +10,7 @@ class RobotWorldApp < Sinatra::Base
   end
 
   get '/robots/new' do
+    @fake_robot = robot_world.generate_fake_data
     erb :new
   end
 
@@ -32,9 +29,24 @@ class RobotWorldApp < Sinatra::Base
     erb :edit
   end
 
+  put '/robots/:id' do |id|
+    robot_world.update(id.to_i, params[:robot])
+    redirect '/robots'
+  end
+
+  delete '/robots/:id' do |id|
+    robot_world.destroy(id.to_i)
+    redirect '/robots'
+  end
+
   def robot_world
-    database = YAML::Store.new('db/robot_world')
-    @robot_world ||= RobotWorld.new(database)
+    if ENV['RACK_ENV'] == "test"
+      database = SQLite3::Database.new("db/robot_world_test.db")
+    else
+      database = SQLite3::Database.new("db/robot_world_development.db")
+    end
+    database.results_as_hash = true
+    RobotWorld.new(database)
   end
 
 end

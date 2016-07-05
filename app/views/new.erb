@@ -1,12 +1,38 @@
-<h2>Bring on the singularity and make a new robot!</h2>
+<div class="well text-center">
+<h2>Bring on the singularity and make a new robot!</h2><br>
 <h4>Enter some robot info:</h4>
-<form action="/robots" method="post">
-  <p>Name: <input type='text' name='robot[name]'></p>
-  <p>City: <input type='text' name='robot[city]'></p>
-  <p>State: <input type='text' name='robot[state]'></p>
-  <p>Avatar: <input type='text' name='robot[avatar]'></p>
-  <p>Birthdate: <input type='text' name='robot[birthdate]'></p>
-  <p>Date Hired: <input type='text' name='robot[date_hired]'></p>
-  <p>Department: <input type='text' name='robot[department]'></p>
-  <input value='Make Robot' type='submit'>
-</form>
+</div>
+<div class="container" style="margin: 5%">
+  <form class="form-horizontal" action="/robots" method="post">
+    <div class="form-group">
+      <label class="control-label">Name:</label>
+      <input class="form-control" type="text" name="robot[name]" value="<%= @fake_robot[:name] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">City:</label>
+      <input class="form-control" type="text" name="robot[city]" value="<%= @fake_robot[:city] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">State:</label>
+      <input class="form-control" type="text" name="robot[state]" value="<%= @fake_robot[:state] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Avatar:</label>
+      <input class="form-control" type="text" name="robot[avatar]" value="<%= @fake_robot[:avatar] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Birthdate:</label>
+      <input class="form-control" type="text" name="robot[birthdate]" value="<%= @fake_robot[:birthdate] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Date Hired:</label>
+      <input class="form-control" type="text" name="robot[date_hired]" value="<%= @fake_robot[:date_hired] %>">
+    </div>
+    <div class="form-group">
+      <label class="control-label">Department:</label>
+      <input class="form-control" type="text" name="robot[department]" value="<%= @fake_robot[:department] %>">
+    </div>
+    <button class="btn btn-primary" type='submit'>Make Robot!</button>
+    <button class="btn btn-secondary"><a href="/">Cancel</a></button>
+  </form>
+</div>

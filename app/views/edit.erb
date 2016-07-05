@@ -1,13 +1,36 @@
-<form action="/robots/<%= @robot.id %>" method="post">
-  <h5>Edit</h5>
-  <ul>
-    <input type="hidden" name="_method" value="PUT">
-    <input type="text" name="robot[name]" value="<%= @robot.name %>">
-    <input type="text" name="robot[city]" value="<%= @robot.city %>">
-    <input type="text" name="robot[state]" value="<%= @robot.state %>">
-    <input type="text" name="robot[avatar]" value="<%= @robot.avatar %>">
-    <input type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>">
-    <input type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>">
-    <input type="text" name="robot[department]" value="<%= @robot.department %>">
-  </ul>
-</form>
+  <h3 class="text-center well">Edit</h3>
+  <div class="container" style="margin: 5%">
+    <form class="form-horizontal" action="/robots/<%= @robot.id %>" method="post">
+      <input type="hidden" name="_method" value="PUT">
+      <div class="form-group">
+        <label class="control-label">Name:</label>
+        <input class="form-control" type="text" name="robot[name]" value="<%= @robot.name %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">City:</label>
+        <input class="form-control" type="text" name="robot[city]" value="<%= @robot.city %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">State:</label>
+        <input class="form-control" type="text" name="robot[state]" value="<%= @robot.state %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Avatar:</label>
+        <input class="form-control" type="text" name="robot[avatar]" value="<%= @robot.avatar %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Birthdate:</label>
+        <input class="form-control" type="text" name="robot[birthdate]" value="<%= @robot.birthdate %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Date Hired:</label>
+        <input class="form-control" type="text" name="robot[date_hired]" value="<%= @robot.date_hired %>">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Department:</label>
+        <input class="form-control" type="text" name="robot[department]" value="<%= @robot.department %>">
+      </div>
+      <button class="btn btn-primary" type='submit'>Submit Changes</button>
+      <button class="btn btn-secondary"><a href="/robots">Cancel</a></button>
+    </form>
+  </div>
